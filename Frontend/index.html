@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Fake News Detector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="container">
+        <h1>AI-Powered Fake News Detector</h1>
+        <div class="input-wrapper">
+            <textarea id="newsInput" placeholder="Paste your news article here..."></textarea>
+        </div>
+        <div class="button-group">
+            <button class="action-btn" onclick="analyzeNews()">Analyze News</button>
+            <button class="action-btn" onclick="summarizeNews()">Summarize</button>
+        </div>
+        <div class="topic-section">
+            <input type="text" id="topicInput" placeholder="Enter a news topic (e.g., Chandrayaan)">
+            <button class="action-btn topic-btn" onclick="fetchNewsByTopic()">Fetch & Analyze</button>
+        </div>
+        <div id="spinner" class="spinner"></div>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Result</h2>
+            <p id="modalContent">Analysis result will appear here...</p>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <audio id="clickSound" src="https://www.soundjay.com/buttons/beep-01a.mp3"></audio>
+    <audio id="successSound" src="https://www.soundjay.com/buttons/beep-07a.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
